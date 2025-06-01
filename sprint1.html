@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Dining-Sprint1</title>
+  <link rel="stylesheet" href="sprint1.css" />
+</head>
+<body>
+
+  <!-- ===SPLASH SCREEN=== -->
+  <section id="splash-screen" class="splash">
+    <div class="splash-content">
+      <h1>Welcome to Custom Dining</h1>
+      <p>Your Personalized Healthy Meal Journey Starts Here.</p>
+      <a href="#auth-section" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  
+  <!-- AUTHENTICATION SECTION=== -->
+  <section id="auth-section" class="auth">
+    <div class="auth-container">
+
+      <!-- ===LOGIN FORM=== -->
+      <div class="login-form">
+        <h2>Login</h2>
+        <form>
+          <label for="login-email">Email or Phone</label>
+          <input type="text" id="login-email" name="email" required />
+
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" name="password" required />
+
+          <a href="#" class="forgot-password">Forgot Password?</a>
+
+          <button type="submit" class="btn">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#register-form">Register</a></p>
+      </div>
+
+      <!-- ===REGISTRATION FORM=== -->
+      <div class="register-form" id="register-form">
+        <h2>Register</h2>
+        <form>
+          <label for="reg-name">Full Name</label>
+          <input type="text" id="reg-name" name="name" required />
+
+          <label for="reg-email">Email or Phone</label>
+          <input type="text" id="reg-email" name="email" required />
+
+          <label for="reg-password">Password</label>
+          <input type="password" id="reg-password" name="password" required />
+
+          <label for="reg-confirm-password">Confirm Password</label>
+          <input type="password" id="reg-confirm-password" name="confirm-password" required />
+
+          <button type="submit" class="btn">Register</button>
+        </form>
+        <p>Already have an account? <a href="#auth-section">Login</a></p>
+      </div>
+    </div>
+  </section>
+
+ <footer>
+    <p>&copy; 2025 Custom Dining. All rights reserved.</p>
+  </footer>
+
+  <!-- ===BOTTOM NAVIGATION=== -->
+    <nav class="bottom-nav">
+    <a href="#auth-section">Login/Signup</a>
+
+  </nav>
+
+  <script src="sprint1.js"></script>
+</body>
+</html>

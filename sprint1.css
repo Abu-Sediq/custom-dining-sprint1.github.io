@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
+
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+        --Light-Green: hsla(119, 70%, 63%, 0.174);
+        --Ghost-White1: hsl(50, 58%, 90%);
+        --dark-blackish-blue: hsl(219, 29%, 14%);
+        --white: hsl(0, 0%, 100%);
+        --gray: hsl(0, 0%, 80%);
+        --black: hsl(0, 0%, 0%);
+        --shade-black: hsl(0, 0%, 7%);
+        --orange-red-family: hsla(16, 95%, 49%, 0.996);
+        --red-family-hover: hsl(0, 72%, 45%);
+        --blue-family: hsla(218, 89%, 41%, 0.863);
+}
+
+
+html {
+  scroll-behavior: auto;
+  font-size: 16px;
+}
+
+body {
+  font-family: Sanchez;
+  color: var(--black);
+  background-color: var(--Light-Green);
+  line-height: 1.6;
+}
+
+
+/* === SPLASH SCREEN === */
+.splash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url('IMAGES/Diningpic.png') no-repeat center center/cover;
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+}
+
+
+.splash-content {
+  background-color:var(--Light-Green);
+  padding: 3rem;
+  border-radius: 8px;
+}
+
+
+/* === TYPOGRAPHY === */
+h1, h2, h3 {
+  color: var(--dark-blackish-blue);
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--shade-black);
+}
+
+a {
+  color: var(--blue-family);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration:none
+}
+
+
+/* === BUTTONS === */
+.btn {
+  display: inline-block;
+  background-color: var(--orange-red-family);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--red-family-hover);
+}
+
+/* === AUTH SECTION === */
+.auth {
+  padding: 4rem 2rem;
+  background-color: var(--Ghost-White1);
+}
+
+.auth-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.login-form,
+.register-form {
+  background-color: var(--white);
+  padding: 2rem;
+  border: 1px solid var(--gray);
+  border-radius: 6px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+}
+
+form input:focus {
+  border-color: var(--orange-red-family);
+  outline: none;
+}
+
+.forgot-password {
+  display: block;
+  text-align: right;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--white);
+  position: relative;
+  color: var(--black);
+  font-size: 1rem;
+}
+
+/* ===BOTTOM NAVIGATION */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color:var(--orange-red-family);
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid var(--gray);
+  padding: 0.5rem 0;
+  z-index: 1000;
+}
+
+/* === MEDIA QUERIES === */
+@media (max-width: 768px) {
+  .auth-container {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .splash h1 {
+    font-size: 1.8rem;
+  }
+
+  .splash p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1rem;
+  }
+
+  form input,
+  form select {
+    padding: 0.5rem;
+  }
+}
